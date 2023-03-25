@@ -597,11 +597,11 @@ Section:NewButton('entity spawner', 'yooo so cool', function ()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI'))()
 end)
 Section:NewButton('Crucifix', 'credits to PenguinManiack', function ()
-    _G.Uses = 1
+    _G.Uses = 1000000
     _G.Range = 30
     _G.OnAnything = true
     _G.Fail = false
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 Section:NewButton('shears', 'credits to PenguinManiack', function ()
     local Tool = game:GetObjects("rbxassetid://12685165702")[1]
