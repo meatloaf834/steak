@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("cool gui", "Serpent")
+local Window = Library.CreateLib("Mikol Gui", "Serpent")
 local Tab = Window:NewTab("coolio")
-local Section = Tab:NewSection("Welcome to cool gui made by Totally Mikol, and MrRemain2")
+local Section = Tab:NewSection("Welcome to Mikol Gui made by Totally Mikol")
 Section:NewButton('Jack spam', 'kill yourself, credits to PenguinManiack', function ()
     loadstring(game:HttpGet("https://pastebin.com/raw/aKHfDXT4"))()
 end)
@@ -595,4 +595,45 @@ end)
 end)
 Section:NewButton('entity spawner', 'yooo so cool', function ()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI'))()
+end)
+Section:NewButton('Crucifix', 'credits to PenguinManiack', function ()
+    _G.Uses = 1
+    _G.Range = 30
+    _G.OnAnything = false
+    _G.Fail = false
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+end)
+Section:NewButton('shears', 'credits to PenguinManiack', function ()
+    local Tool = game:GetObjects("rbxassetid://12685165702")[1]
+local Humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+local Sound = Instance.new("Sound")
+
+Tool.Parent = game.Players.LocalPlayer.Backpack
+
+Sound.PlaybackSpeed = 1.25
+Sound.SoundId = "rbxassetid://9118823101"
+Sound.Parent = Tool
+
+Tool.Activated:Connect(function()
+    local Use = Tool.Animations.use
+    local UseTrack = Humanoid:LoadAnimation(Use)
+
+    UseTrack:Play()
+    Sound:Play()
+    wait(0.25)
+    Sound:Play()
+    game:GetService("Players").LocalPlayer:GetMouse().Target:FindFirstAncestorOfClass("Model"):Destroy()
+end)
+
+Tool.Equipped:Connect(function()
+    local Idle = Tool.Animations.idle
+    local IdleTrack = Humanoid:LoadAnimation(Idle)
+
+    IdleTrack:Play()
+end)
+Tool.Unequipped:Connect(function()
+    for _,anim in pairs(Humanoid.Animator:GetPlayingAnimationTracks()) do
+        anim:Stop()
+    end
+end)
 end)
