@@ -637,3 +637,10 @@ Tool.Unequipped:Connect(function()
     end
 end)
 end)
+Section:NewButton('vitamins', 'holy moly', function ()
+    getgenv().CustomVitamins = {
+        SpeedBoost = 7,
+        EffectDuration = 25
+    }
+    loadstring(game:HttpGet("https://pastebin.com/raw/qH9PEhfQ"))()
+end)
